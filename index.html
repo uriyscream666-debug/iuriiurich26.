@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление неделей | Премиум Бар</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
+    <style>
+        /* Премиум стилизация */
+        .reveal {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background: #0a0a0f;
+        }
+        .reveal .slides {
+            text-align: left;
+        }
+        .reveal h1, .reveal h2, .reveal h3 {
+            text-transform: none;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        .reveal h1 { color: #c9a84c; font-size: 3.8em; }
+        .reveal h2 { color: #c9a84c; border-bottom: 2px solid #c9a84c; display: inline-block; padding-bottom: 15px; }
+        .reveal h3 { color: #ffffff; }
+        .reveal p, .reveal li, .reveal td, .reveal th {
+            color: #e0e0e0;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+        .gold { color: #c9a84c; font-weight: bold; }
+        .highlight-box {
+            background: rgba(201, 168, 76, 0.1);
+            border-left: 6px solid #c9a84c;
+            padding: 15px 25px;
+            margin: 15px 0;
+        }
+        .reveal table {
+            font-size: 0.7em;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .reveal th {
+            background: #c9a84c;
+            color: #0a0a0f;
+            font-weight: bold;
+            padding: 10px 8px;
+            text-align: center;
+        }
+        .reveal td {
+            padding: 12px 8px;
+            border-bottom: 1px solid #333;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .reveal ul { list-style-type: none; }
+        .reveal ul li::before {
+            content: "▹ ";
+            color: #c9a84c;
+            font-weight: bold;
+        }
+        .tag {
+            display: inline-block;
+            background: #c9a84c;
+            color: #0a0a0f;
+            font-size: 0.6em;
+            font-weight: bold;
+            padding: 3px 12px;
+            border-radius: 20px;
+            margin-right: 8px;
+        }
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .stat-item {
+            text-align: center;
+            background: rgba(255,255,255,0.03);
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .stat-item .num { font-size: 2.5em; color: #c9a84c; font-weight: 100; }
+        .stat-item .label { font-size: 0.7em; text-transform: uppercase; letter-spacing: 1px; color: #888; }
+        .footer-note {
+            margin-top: 40px;
+            font-size: 0.6em;
+            color: #555;
+            text-align: center;
+            border-top: 1px solid #222;
+            padding-top: 20px;
+        }
+        /* Для мобильных */
+        .reveal .slides { text-align: left; }
+        .reveal .controls { color: #c9a84c; }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- СЛАЙД 1: ТИТУЛ -->
+            <section data-background-color="#0a0a0f">
+                <div style="text-align: center; margin-top: 10vh;">
+                    <p style="color: #c9a84c; letter-spacing: 8px; font-size: 0.9em;">PREMIUM BAR MANAGEMENT</p>
+                    <h1 style="font-size: 4.5em; margin: 20px 0;">НЕДЕЛЯ УПРАВЛЕНИЯ</h1>
+                    <h3 style="color: #fff; font-weight: 300;">22 – 28 ИЮНЯ 2026</h3>
+                    <div style="margin: 40px 0 20px 0;">
+                        <span style="border: 1px solid #c9a84c; padding: 10px 30px; color: #c9a84c; margin: 0 10px;">TSAREVNA</span>
+                        <span style="border: 1px solid #c9a84c; padding: 10px 30px; color: #c9a84c; margin: 0 10px;">СЫРЗАВОД</span>
+                    </div>
+                    <div style="margin-top: 60px;">
+                        <p style="color: #888; font-size: 0.7em;">Гостевая смена AST · Тренинг · Вечеринка в Завидово</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- СЛАЙД 2: ТАЙМЛАЙН -->
+            <section data-background-color="#0a0a0f">
+                <h2>Таймлайн недели</h2>
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin-top: 30px; gap: 10px;">
+                    <div style="flex: 1; min-width: 80px; text-align: center; background: #14141a; padding: 15px 5px; border-radius: 8px; border-top: 3px solid #555;">
+                        <span style="color: #888; font-size: 0.7em;">Пн 22</span>
+                        <p style="font-size: 0.7em; margin: 10px 0 0 0; color: #fff;">🛫 Вылет<br><span style="color: #888; font-size: 0.8em;">Стамбул</span></p>
+                    </div>
+                    <div style="flex: 1; min-width: 80px; text-align: center; background: #14141a; padding: 15px 5px; border-radius: 8px; border-top: 3px solid #555;">
+                        <span style="color: #888; font-size: 0.7em;">Вт 23</span>
+                        <p style="font-size: 0.7em; margin: 10px 0 0 0; color: #fff;">😴 Выходной<br><span style="color: #888; font-size: 0.8em;">Отдых</span></p>
+                    </div>
+                    <div style="flex: 1; min-width: 80px; text-align: center; background: #14141a; padding: 15px 5px; border-radius: 8px; border-top: 3px solid #555;">
+                        <span style="color: #888; font-size: 0.7em;">Ср 24</span>
+                        <p style="font-size: 0.7em; margin: 10px 0 0 0; color: #fff;">🔄 Перелёт<br><span style="color: #888; font-size: 0.8em;">Москва</span></p>
+                    </div>
+                    <div style="flex: 1; min-width: 80px; text-align: center; background: #1f1a0f; padding: 15px 5px; border-radius: 8px; border-top: 3px solid #c9a84c;">
+                        <span style="color: #c9a84c; font-size: 0.7em;">Чт 25</span>
+                        <p style="font-size: 0.7em; margin: 10px 0 0 0; color: #fff;">🥃 AST<br><span style="color: #c9a84c; font-size: 0.8em;">Tsarevna</span></p>
+                    </div>
+                    <div style="flex: 1; min-width: 80px; text-align: center; background: #14141a; padding: 15px 5px; border-radius: 8px; border-top: 3px solid #c9a84c;">
+                        <span style="color: #c9a84c; font-size: 0.7em;">Пт 26</span>
+                        <p style="font-size: 0.7em; margin: 10px 0 0 0; color: #fff;">📚 Тренинг<br><span style="color: #888; font-size: 0.8em;">Персонал</span></p>
+                    </div>
+                    <div style="flex: 1; min-width: 80px; text-align: center; background: #14141a; padding: 15px 5px; border-radius: 8px; border-top: 3px solid #555;">
+                        <span style="color: #888; font-size: 0.7em;">Сб 27</span>
+                        <p style="font-size: 0.7em; margin: 10px 0 0 0; color: #fff;">🔧 Буфер<br><span style="color: #888; font-size: 0.8em;">Подготовка</span></p>
+                    </div>
+                    <div style="flex: 1; min-width: 80px; text-align: center; background: #2a1f10; padding: 15px 5px; border-radius: 8px; border-top: 3px solid #c9a84c;">
+                        <span style="color: #c9a84c; font-size: 0.7em;">Вс 28</span>
+                        <p style="font-size: 0.7em; margin: 10px 0 0 0; color: #fff;">🔥 Марафон<br><span style="color: #c9a84c; font-size: 0.8em;">Сырзавод</span></p>
+                    </div>
+                </div>
+                <div class="highlight-box" style="margin-top: 30px;">
+                    <p style="margin: 0; font-size: 0.8em;"><span class="gold">Приоритет:</span> Сохранение энергии + Жёсткое делегирование рутины</p>
+                </div>
+            </section>
+
+            <!-- СЛАЙД 3: ТАБЛИЦА ПО ДНЯМ -->
+            <section data-background-color="#0a0a0f">
+                <h2>Ключевые задачи (сжато)</h2>
+                <table>
+                    <thead>
+                        <tr><th>Дата</th><th>Утро (10–12)</th><th>День (12–17)</th><th>Вечер</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><span class="gold">22 Пн</span></td><td>Согласование с СЕО</td><td>Остатки + Заказы</td><td>Вылет 21:00</td></tr>
+                        <tr><td><span class="gold">25 Чт</span></td><td>Сон + Созвон AST</td><td>Дегустация, Брифинг</td><td>Гостевая смена (19:00)</td></tr>
+                        <tr><td><span class="gold">26 Пт</span></td><td>Подготовка к тренингу</td><td>Тренинг (10–13) + Обед</td><td>Ранний отдых</td></tr>
+                        <tr><td><span class="gold">28 Вс</span></td><td>Приезд в Сырзавод</td><td>Тренинг (12–13) + Смена (13–15)</td><td>Вечеринка (с 19:00)</td></tr>
+                    </tbody>
+                </table>
+                <div style="margin-top: 20px;">
+                    <p style="font-size: 0.7em; color: #888;">* 23 и 24 июня — строгие блоки отдыха / перелёты (без операционных задач).</p>
+                </div>
+            </section>
+
+            <!-- СЛАЙД 4: ЧЕТВЕРГ 25.06 (AST) -->
+            <section data-background-color="#0a0a0f">
+                <h2 style="font-size: 2.2em;">Чт 25.06 · Гостевая AST</h2>
+                <h3 style="color: #c9a84c; font-size: 1.2em; margin-bottom: 20px;">Tsarevna Zavidovo spa village</h3>
+                <div class="grid-2col">
+                    <div>
+                        <p><span class="tag">МЕНЮ</span></p>
+                        <ul style="font-size: 0.8em; line-height: 2;">
+                            <li>Тимбер Сауэр</li>
+                            <li>Голден Ауэр</li>
+                            <li>Дайкири</li>
+                            <li>Мексиканский ударный</li>
+                            <li>Палома</li>
+                            <li>Вердита</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p><span class="tag">ВАША РОЛЬ</span></p>
+                        <ul style="font-size: 0.8em; line-height: 1.8;">
+                            <li><span class="gold">Host зала</span> (не за баром)</li>
+                            <li>Контроль очереди/потока</li>
+                            <li>Решение нестандартных ситуаций</li>
+                            <li>Welcome для амбассадоров в 17:00</li>
+                        </ul>
+                        <div class="highlight-box" style="margin-top: 15px; padding: 10px 15px;">
+                            <p style="font-size: 0.7em; margin: 0;">✅ Чек: цитрусы, яичный белок, специи, крафтовый лёд</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- СЛАЙД 5: ВОСКРЕСЕНЬЕ 28.06 (МАРАФОН) -->
+            <section data-background-color="#0a0a0f">
+                <h2 style="font-size: 2.2em;">Вс 28.06 · Супер-марафон</h2>
+                <h3 style="color: #c9a84c; font-size: 1.2em;">Сырзавод · Завидово</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 25px;">
+                    <div style="background: #14141a; padding: 20px; border-radius: 10px; border-left: 4px solid #c9a84c;">
+                        <p style="color: #c9a84c; font-weight: bold; margin: 0 0 10px 0;">12:00 – 13:00</p>
+                        <p style="margin: 0; font-size: 0.9em;">📘 Обучение по итальянским аперитивам</p>
+                        <p style="font-size: 0.7em; color: #888; margin: 5px 0 0 0;">Для местной команды бара</p>
+                    </div>
+                    <div style="background: #14141a; padding: 20px; border-radius: 10px; border-left: 4px solid #c9a84c;">
+                        <p style="color: #c9a84c; font-weight: bold; margin: 0 0 10px 0;">13:00 – 15:00</p>
+                        <p style="margin: 0; font-size: 0.9em;">🍸 Гостевая смена</p>
+                        <p style="font-size: 0.7em; color: #888; margin: 5px 0 0 0;">Совместно с Даниилом Пановым</p>
+                    </div>
+                    <div style="background: #14141a; padding: 20px; border-radius: 10px; border-left: 4px solid #c9a84c;">
+                        <p style="color: #c9a84c; font-weight: bold; margin: 0 0 10px 0;">15:00 – 17:00</p>
+                        <p style="margin: 0; font-size: 0.9em;">🎧 Миксуем с DJ Светланой</p>
+                        <p style="font-size: 0.7em; color: #888; margin: 5px 0 0 0;">Помощник готовит веранду к вечеру</p>
+                    </div>
+                    <div style="background: #2a1f10; padding: 20px; border-radius: 10px; border-left: 4px solid #c9a84c;">
+                        <p style="color: #c9a84c; font-weight: bold; margin: 0 0 10px 0;">19:00 – До конца</p>
+                        <p style="margin: 0; font-size: 0.9em;">🎉 Вечеринка на веранде</p>
+                        <p style="font-size: 0.7em; color: #c9a84c; margin: 5px 0 0 0;">Ваш фокус: атмосфера и ритм</p>
+                    </div>
+                </div>
+                <p style="font-size: 0.8em; margin-top: 20px; color: #888;">Коктейли: Нитро Сарти, Рамос Физ, Беллини «Эн» Корретто, Мексикан Пинк</p>
+            </section>
+
+            <!-- СЛАЙД 6: РИСКИ И ДИСЦИПЛИНА -->
+            <section data-background-color="#0a0a0f">
+                <h2>Риски & Дисциплина</h2>
+                <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px;">
+                    <div style="flex: 1; min-width: 180px; background: #14141a; padding: 20px; border-radius: 10px;">
+                        <p style="color: #c9a84c; font-size: 1.2em; margin: 0;">😴</p>
+                        <h4 style="color: #fff; margin: 10px 0 5px 0;">Сон — тактика</h4>
+                        <p style="font-size: 0.7em; color: #aaa; margin: 0;">23, 24, 27 — строгий отдых. Спать в самолётах.</p>
+                    </div>
+                    <div style="flex: 1; min-width: 180px; background: #14141a; padding: 20px; border-radius: 10px;">
+                        <p style="color: #c9a84c; font-size: 1.2em; margin: 0;">🤝</p>
+                        <h4 style="color: #fff; margin: 10px 0 5px 0;">Делегирование</h4>
+                        <p style="font-size: 0.7em; color: #aaa; margin: 0;">Приёмку и технику — замам. Вы — только решения.</p>
+                    </div>
+                    <div style="flex: 1; min-width: 180px; background: #14141a; padding: 20px; border-radius: 10px;">
+                        <p style="color: #c9a84c; font-size: 1.2em; margin: 0;">🔧</p>
+                        <h4 style="color: #fff; margin: 10px 0 5px 0;">Техника</h4>
+                        <p style="font-size: 0.7em; color: #aaa; margin: 0;">27.06 лично проверить азот и розетки для DJ.</p>
+                    </div>
+                    <div style="flex: 1; min-width: 180px; background: #14141a; padding: 20px; border-radius: 10px;">
+                        <p style="color: #c9a84c; font-size: 1.2em; margin: 0;">📋</p>
+                        <h4 style="color: #fff; margin: 10px 0 5px 0;">Чек-лист</h4>
+                        <p style="font-size: 0.7em; color: #aaa; margin: 0;">За 2 часа до события — личная проверка готовности.</p>
+                    </div>
+                </div>
+                <div class="highlight-box" style="margin-top: 30px; text-align: center;">
+                    <p style="font-size: 1.2em; color: #c9a84c; margin: 0;">«Холодная голова — тёплый приём гостей»</p>
+                </div>
+                <div class="footer-note">
+                    <p>Неделя премиум-управления © 2026</p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            center: true,
+            hash: true,
+            transition: 'slide',
+            backgroundTransition: 'fade',
+            slideNumber: true,
+            width: 1200,
+            height: 700
+        });
+    </script>
+</body>
+</html>
